@@ -1,0 +1,268 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Marvel";
+}
+
+section {
+    display: block;
+}
+
+main {
+    margin-top: 70px;
+}
+
+div {
+    display: block;
+}
+
+div:end {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    min-width: 320px;
+    height: 100%;
+    font-family: 'Roboto slab', sans-serif;
+    color: #888888;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+#finder .info {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#finder {
+    background-image: url("https://i.annihil.us/u/prod/marvel/html_blocks_assets/homepage/comics/2018/02/comics-desktop-022718.jpg");
+    background-size: auto;
+    position: relative;
+    min-height: 500px;
+    width: 100%;
+    border-bottom: 5px;
+}
+
+#findButton {
+    position: relative;
+    height: 40px;
+    margin-top: 2px;
+    font-size: 20pt;
+    padding-top: 2px;
+    padding-bottom: 8px;
+    color: red;
+    border-color: black;
+    display: inline-block;
+}
+
+#inputID, #end_year, #start_year {
+    width: 80%;
+    position: relative;
+    height: 40px;
+    margin-top: 2px;
+    margin-left: 10px;
+    font-size: 20pt;
+    color: red;
+    border-color: black;
+    float: left;
+}
+
+.found {
+    display: none;
+    width: 100%;
+    padding-left: 5px;
+    position: relative;
+    margin-left: 10px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: left;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.title {
+    position: relative;
+    word-wrap: normal;
+    width: 380px;
+    text-align: center;
+}
+
+.description {
+    overflow: auto;
+    position: relative;
+    word-wrap: normal;
+    font-size: 15px;
+    width: auto;
+    height: 60px;
+    padding-left: 10px;
+}
+
+#loader {
+    display: none;
+    position: relative;
+    border: 7px solid black;
+    border-top: 7px solid red;
+    border-bottom: 7px solid red;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    z-index: 2;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#timeline {
+    background-image: url("../img/kosmos.jpg");
+    height: 400px;
+    z-index: 1;
+    display: none;
+}
+
+.events {
+    display: none;
+    padding: 0 0 70px 0;
+    position: relative;
+    height: auto;
+    text-align: center;
+}
+
+.event {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    border: black solid 2px;
+    margin: 2% 2% 0 0;
+    background: white;
+    cursor: pointer;
+}
+
+#showMore {
+    text-align: center;
+    position: relative;
+
+}
+
+.event_title {
+    position: relative;
+    word-wrap: normal;
+    width: auto;
+    text-align: center;
+    color: white;
+}
+
+.thumbnail {
+    position: relative;
+    cursor: pointer;
+    height: 140px;
+    width: 140px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#moreEvents {
+    background: repeating-linear-gradient(
+            45deg,
+            red,
+            red 10px,
+            black 10px,
+            black 20px
+    );
+}
+
+.main_event{
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    cursor: pointer;
+}
+
+.zoomer {
+    background: rgba(0, 0, 0, 0.5);
+    background-size: auto;
+    position: absolute;
+    width: 100%;
+    height: auto;
+
+    left: 0;
+    display: none;
+    text-align: center;
+}
+
+.zoomed_img {
+    position: relative;
+    z-index: 4;
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.zoomed_title {
+    z-index: 4;
+    text-align: center;
+    position: relative;
+    margin-top: 170px;
+    margin-bottom: 0px;
+    background: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.zoomed_description {
+    overflow: auto;
+    position: relative;
+    word-wrap: normal;
+    font-size: 30px;
+    margin-top: 10px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#characters {
+    clear: both;
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.character {
+    position: relative;
+    z-index: 4;
+    float: left;
+    display: inline-block;
+    margin: 10px;
+}
+
+.character_name {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: white;
+}
