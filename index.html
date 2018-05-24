@@ -9,9 +9,7 @@
     <script src="libraries/p5.js" type="text/javascript"></script>
     <script src="libraries/p5.dom.js" type="text/javascript"></script>
     <script src="libraries/jquery.js" type="text/javascript"></script>
-    <script src="libraries/arbor.js" type="text/javascript"></script>
     <script src="js/pagescript.js" type="text/javascript"></script>
-    <script src="js/graphInitialise.js" type="text/javascript"></script>
     <title>Marvel Events</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/simplegrid.css">
@@ -29,94 +27,30 @@
 
 <body>
 <header>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target=".navbar-collapse">
-                </button>
-                <a href="http://marvel.com" style="padding: 15px 15px; float: right">Data provided by Marvel. © 2018 MARVEL</a>
-                <a id="nav" class="navbar-brand" href="index.html" >Marvel universe events</a>
-            </div>
-        </div>
-    </div>
+    <!--<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">-->
+        <!--<div class="container">-->
+            <!--<div class="navbar-header">-->
+                <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"-->
+                        <!--data-target=".navbar-collapse">-->
+                <!--</button>-->
+                <!--<a href="http://marvel.com" style="padding: 15px 15px; float: right">Data provided by Marvel. © 2018 MARVEL</a>-->
+                <!--<a id="nav" class="navbar-brand" href="index.html" >Marvel universe events</a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 </header>
 
 <main>
-    <section id="finder">
-        <div class="grid">
-            <div class="col-1-2">
-                <div class="info col-5-12">
-                    <h1>
-                        This is app that can help you to understand order of events in storyline of Marvel comics.
-                    </h1>
-                </div>
-                <input type="text" id="inputID" placeholder="Let's find an event">
-                <button id="findButton" type="button" class="btn btn-default">Find</button>
-                <div id="loader"></div>
-                <select name="name" id="start_year" class="form-control">
-                    <option value="1984-00-00">1984</option>
-                    <option value="1990-00-00">1990</option>
-                    <option value="1995-00-00">1995</option>
-                    <option value="2000-00-00">2000</option>
-                    <option value="2005-00-00">2005</option>
-                    <option value="2010-00-00">2010</option>
-                    <option value="2015-00-00">2015</option>
-                    <option value="2020-00-00">2020</option>
-                    <option value="2025-00-00">2025</option>
-                    <option value="2030-00-00">2030</option>
-                    <option value="2035-00-00">2035</option>
-                    <option value="2037-00-00">2037</option>
-                </select>
-                <select name="name" id="end_year" class="form-control">
-                    <option value="1984-00-00">1984</option>
-                    <option value="1990-00-00">1990</option>
-                    <option value="1995-00-00">1995</option>
-                    <option value="2000-00-00">2000</option>
-                    <option value="2005-00-00">2005</option>
-                    <option value="2010-00-00">2010</option>
-                    <option value="2015-00-00">2015</option>
-                    <option value="2020-00-00">2020</option>
-                    <option value="2025-00-00">2025</option>
-                    <option value="2030-00-00">2030</option>
-                    <option value="2035-00-00">2035</option>
-                    <option value="2037-00-00">2037</option>
-                </select>
-            </div>
-        </div>
-    </section>
-    <canvas id="viewport" height="500" width="1300" ; style="margin: 10px"></canvas>
-    <section id="moreEvents">
+
+    <section>
         <div class="grid">
             <div class="col-1-1" style="position: relative">
             </div>
         </div>
     </section>
-    <section id="timeline">
+    <section>
         <div class="grid">
             <div class="col-1-1">
-                <div style="text-align: center">
-                    <h1 style="color: white; display: inline-block; float: left; margin-left: 20px"> Before </h1>
-                    <h1 style="color: white; display: inline-block "> Now </h1>
-                    <h1 style="color: white; display: inline-block; float: right; margin-right: 20px"> After </h1>
-                </div>
-                <img src="img/Timeline.png" height="89" width="100%">
-                <div class="events">
-                    <div class="main_event col-4-12 " style="display: inline-block">
-                        <h3 class="event_title"></h3>
-                        <img alt="Image" class="thumbnail" src="" id="prev"
-                             onclick="{chosen_event = prev_event.results[0]}">
-                    </div>
-                    <div class="main_event col-4-12" style="display: inline-block">
-                        <h3 class="event_title"></h3>
-                        <img alt="Image" class="thumbnail" src="" id="cur" onclick="{chosen_event = cur_event}">
-                    </div>
-                    <div class="main_event col-4-12" style="display: inline-block">
-                        <h3 class="event_title"></h3>
-                        <img alt="Image" class="thumbnail" src="" id="next"
-                             onclick="{chosen_event = next_event.results[0]}">
-                    </div>
-                </div>
             </div>
         </div>
     </section>
