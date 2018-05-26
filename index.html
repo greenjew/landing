@@ -4,13 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Course project using Marvel api">
     <meta name="author" content="Grigory Kozinov">
     <script src="libraries/p5.js" type="text/javascript"></script>
     <script src="libraries/p5.dom.js" type="text/javascript"></script>
     <script src="libraries/jquery.js" type="text/javascript"></script>
-    <script src="js/pagescript.js" type="text/javascript"></script>
-    <title>Marvel Events</title>
+    <!--<script src="js/pagescript.js" type="text/javascript"></script>-->
+    <title>Landing</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/simplegrid.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -26,31 +25,35 @@
 </head>
 
 <body>
-<header>
-    <!--<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">-->
-        <!--<div class="container">-->
-            <!--<div class="navbar-header">-->
-                <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"-->
-                        <!--data-target=".navbar-collapse">-->
-                <!--</button>-->
-                <!--<a href="http://marvel.com" style="padding: 15px 15px; float: right">Data provided by Marvel. © 2018 MARVEL</a>-->
-                <!--<a id="nav" class="navbar-brand" href="index.html" >Marvel universe events</a>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-</header>
-
+<nav id="nav_bar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <a class="navbar-brand" href="#" style=" color: black;">Название</a>
+    <ul class="nav navbar-nav">
+        <li>
+            <a style="color: black;" href="#">Home</a>
+        </li>
+        <li>
+            <a style="color: black;" href="#">Styles</a>
+        </li>
+        <li>
+            <a style="color: black;" href="#">Shops</a>
+        </li>
+    </ul>
+</nav>
 <main>
 
-    <section>
+    <section id="top">
         <div class="grid">
-            <div class="col-1-1" style="position: relative">
+            <div class="col-1-1">
+                <h1 class="title">Новый сервис, который поможет Вам с выбором стильного образа</h1>
             </div>
         </div>
     </section>
-    <section>
+
+
+    <section id="desc">
         <div class="grid">
             <div class="col-1-1">
+                <h1 class="title">Всё что вам было необходимо - в одном месте</h1>
             </div>
         </div>
     </section>

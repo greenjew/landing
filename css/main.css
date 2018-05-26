@@ -42,19 +42,43 @@ img {
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
+#nav_bar{
+    background: #cea172;
+    font-family: B52;
+    color: black;
+    border-color: peru;
+}
+
+#top{
+    margin-top: -22px;
+    height: 400px;
+    background-image: url("../img/header.jpg");
+
+}
+
+#desc{
+    background: lightslategrey;
+    height: 400px;
+
+}
+
 
 .title {
     position: relative;
     word-wrap: normal;
-    width: 380px;
+    width: 100%;
+    font-family: Abduction;
+    color: black ;
+    background: rgba(255,255,255,0.3) ;
     text-align: center;
+    font-size: 80px;
 }
 
 .description {
     overflow: auto;
     position: relative;
     word-wrap: normal;
-    font-size: 15px;
+    font-size: 12px;
     width: auto;
     height: 60px;
     padding-left: 10px;
