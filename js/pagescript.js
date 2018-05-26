@@ -1,5 +1,7 @@
 
 $(document).ready(function () {
+
+
     $(".").click(
         //по клику открываем информацию
         function showIinfo() {

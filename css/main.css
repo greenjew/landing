@@ -49,29 +49,44 @@ img {
     border-color: peru;
 }
 
+.w_pic{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.65;
+}
+
 #top{
     margin-top: -22px;
-    height: 400px;
+    min-height: 933px;
     background-image: url("../img/header.jpg");
-
+    background-size: 100%
 }
 
 #desc{
+    position: relative;
     background: lightslategrey;
-    height: 400px;
+    height: 300px;
+}
 
+#styles{
+    position: relative;
+    min-height: 578px;
+    background-image:url("../img/moodboard.jpg") ;
 }
 
 
 .title {
-    position: relative;
+    top: 40%;
+    left:0;
+    text-align: center;
+    position: absolute;
     word-wrap: normal;
     width: 100%;
     font-family: Abduction;
     color: black ;
-    background: rgba(255,255,255,0.3) ;
-    text-align: center;
-    font-size: 80px;
+    background: rgba(255,255,255,0.5) ;
+    font-size: 50px;
 }
 
 .description {
