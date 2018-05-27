@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Grigory Kozinov">
-    <script src="libraries/p5.js" type="text/javascript"></script>
-    <script src="libraries/p5.dom.js" type="text/javascript"></script>
     <script src="libraries/jquery.js" type="text/javascript"></script>
-    <!--<script src="js/pagescript.js" type="text/javascript"></script>-->
-    <title>Landing</title>
+    <script src="js/pagescript.js" type="text/javascript"></script>
+    <script src="libraries/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <title>EasyLook - style assistant</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/simplegrid.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Marvel" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -26,16 +28,16 @@
 
 <body>
 <nav id="nav_bar" class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <a class="navbar-brand" href="#" style=" color: black;">Название</a>
+    <a class="navbar-brand" href="#" style=" color: black;">EasyLook</a>
     <ul class="nav navbar-nav">
         <li>
-            <a style="color: black;" href="#">Home</a>
+            <a style="color: black;" href="#top">Начало</a>
         </li>
         <li>
-            <a style="color: black;" href="#">Styles</a>
+            <a style="color: black;" href="#styles">Подбор Стиля</a>
         </li>
         <li>
-            <a style="color: black;" href="#">Shops</a>
+            <a style="color: black;" href="#partners">Партнёры</a>
         </li>
     </ul>
 </nav>
@@ -44,7 +46,7 @@
     <section>
         <div class="w_pic" id="top">
             <div class="title">
-                <span style="background: rgba(255, 255, 255, 0.5);">Новый сервис, который поможет Вам с выбором стильного образа</span>
+                <span style=" margin:0 50px; background: rgba(255, 255, 255, 0.5);">Новый сервис, который поможет Вам с выбором стильного образа</span>
             </div>
         </div>
     </section>
@@ -60,50 +62,99 @@
 
     <section>
         <div class="w_pic" id="styles">
-            <div class="style">
+            <div class="style wow fadeInUp">
                 <img class="thumb" src="img/Night.jpg">
-                <button type="button" style="position: absolute; left: 100px;top: 220px" class="btn btn-default">
-                    Вечерний
+                <button type="button" style="position: absolute; left: 80px;top: 220px" class="btn btn-default">
+                    Вечерний наряд
                 </button>
             </div>
 
-            <div class="style">
-                <img class="thumb" src="img/Night.jpg">
+            <div class="style wow fadeInUp">
+                <img class="thumb" src="img/casual.jpg">
+                <select name="name" id="casual_woman" class="form-control"
+                        style=" position: absolute; left: 80px;top: 220px; width: 150px"
+                        class="btn btn-default">
+                    <option value=""> Кэжуал</option>
+                    <option value=""> Уличный</option>
+                    <option value=""> Спортивный</option>
+                </select>
+            </div>
+
+            <div class="style wow fadeInUp">
+                <img class="thumb" src="img/office.jpg">
                 <button type="button" style="position: absolute; left: 100px;top: 220px" class="btn btn-default">
-                    Вечерний
+                    Офисный
                 </button>
             </div>
 
-            <div class="style">
-                <img class="thumb" src="img/Night.jpg">
-                <button type="button" style="position: absolute; left: 100px;top: 220px" class="btn btn-default">
-                    Вечерний
+            <div class="style wow fadeInUp">
+                <img class="thumb" src="img/night_man.jpg">
+                <button type="button" style="position: absolute; left: 80px;top: 220px" class="btn btn-default">
+                    Вечерний наряд
                 </button>
             </div>
 
-            <div class="style">
-                <img class="thumb" src="img/Night.jpg">
-                <button type="button" style="position: absolute; left: 100px;top: 220px" class="btn btn-default">
-                    Вечерний
-                </button>
+            <div class="style wow fadeInUp">
+                <img class="thumb" src="img/casual_man.jpg">
+                <select name="name" id="casual_man" class="form-control"
+                        style=" position: absolute; left: 80px;top: 220px; width: 150px"
+                        class="btn btn-default">
+                    <option value=""> Кэжуал</option>
+                    <option value=""> Уличный</option>
+                    <option value=""> Спортивный</option>
+                </select>
             </div>
 
-            <div class="style">
-                <img class="thumb" src="img/Night.jpg">
+            <div class="style wow fadeInUp">
+                <img class="thumb" src="img/office_man.jpg">
                 <button type="button" style="position: absolute; left: 100px;top: 220px" class="btn btn-default">
-                    Вечерний
+                    Офисный
                 </button>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="desc">
+        <div class="desc" id="partners">
             <div class="title">
-                <span style="background: rgba(255, 255, 255, 0.5);">Наши партнёры - крупные онлайн-магазины</span>
+                <span style="background: rgba(255, 255, 255, 0.5);">Наши партнёры </span>
             </div>
         </div>
     </section>
+
+    <section>
+        <div class="w_pic" id="shops">
+            <div style="padding: 10px 100px">
+                <img class="wow fadeInUp" src="img/lamoda.png"
+                     style=" margin: 10px; max-height: 250px; max-width: 250px">
+                <img class="wow fadeInUp" src="img/wildberries.png"
+                     style="margin: 10px; max-height: 250px; max-width: 250px">
+                <img class="wow fadeInUp" src="img/asos.png" style="margin: 10px; max-height: 250px; max-width: 250px">
+                <img class="wow fadeInUp" src="img/butik.png" style="margin: 10px; max-height: 250px; max-width: 250px">
+                <img class="wow fadeInUp" src="img/kupivip.png"
+                     style="margin: 10px; max-height: 250px; max-width: 250px">
+                <img class="wow fadeInUp" src="img/topbrands.jpg"
+                     style=" margin: 10px; max-height: 250px; max-width: 250px">
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="authors">
+            <div>
+                <a class="author" href="https://vk.com/ayrin_bers">Берснева Арина</a>
+                <a class="author" href="https://vk.com/id249022628">Джафаров Фуад</a>
+                <a class="author" href="https://vk.com/i_am_frodo">Козинов Григорий</a>
+                <a class="author" href="https://vk.com/fox0117">Кончагин Андрей</a>
+                <a class="author" href="https://vk.com/id32624171">Царская Нина</a>
+            </div>
+            <div>
+                <a class="author" href="https://www.hse.ru">HSE</a>
+            </div>
+        </div>
+    </section>
+
 
 </main>
 
